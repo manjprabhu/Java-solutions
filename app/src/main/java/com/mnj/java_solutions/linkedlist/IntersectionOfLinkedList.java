@@ -6,7 +6,6 @@ public class IntersectionOfLinkedList {
 
     }
 
-
     private int getLength(ListNode.Node head) {
         int count  =0;
         while (head!=null) {
@@ -15,4 +14,5 @@ public class IntersectionOfLinkedList {
         }
         return count;
     }
+
 }
