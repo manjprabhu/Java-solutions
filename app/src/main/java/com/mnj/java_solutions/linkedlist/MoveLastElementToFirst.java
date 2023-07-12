@@ -6,6 +6,11 @@ public class MoveLastElementToFirst {
         ListNode node = new ListNode();
         ListNode.Node head = node.insert();
 
+        if (head.next == null) {
+            System.out.println("==>> Only one node");
+            return;
+        }
+
         ListNode.Node temp = head;
 
         //traverse the list until 2nd last element

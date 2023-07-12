@@ -16,8 +16,9 @@ public class LinkedListCycle2 {
             slow = slow.next;
 
             if (fast == slow) {
-                while (head != slow) {
-                    head = head.next;
+                slow = head;
+                while (slow != fast) {
+                    fast = fast.next;
                     slow = slow.next;
                 }
                 System.out.println("==>> Cycle starts at:" + slow.data);
