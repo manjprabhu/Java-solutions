@@ -20,6 +20,11 @@ public class DeleteMiddleElement {
             fast = fast.next.next;
             slow = slow.next;
         }
+//If there are only 2 nodes
+        if(slow.next == null) {
+            head.next = null;
+            return ;
+        }
 
         slow.data = slow.next.data;
         slow.next = slow.next.next;
