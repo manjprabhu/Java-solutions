@@ -16,6 +16,7 @@ public class RemoveDuplicateFromSortedLinkedList {
                 temp = temp.next;
                 continue;
             }
+            prev = temp.next;
             prev = temp;
             temp = temp.next;
         }
