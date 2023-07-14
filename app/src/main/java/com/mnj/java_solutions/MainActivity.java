@@ -1,8 +1,10 @@
 package com.mnj.java_solutions;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.mnj.java_solutions.linkedlist.RotateLeft;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
-       searchInsertPosition.SearchInsertPositionInArray();
+        RotateLeft rotateLeft = new RotateLeft();
+        rotateLeft.rotateLeft();
     }
 }

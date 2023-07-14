@@ -21,7 +21,7 @@ public class ListNode {
         l6.next = l7;
         l7.next = l8;
         l8.next = null;
-        return l4;
+        return l1;
     }
 
     void display(Node head) {

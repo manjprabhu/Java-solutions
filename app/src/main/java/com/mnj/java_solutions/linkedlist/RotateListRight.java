@@ -17,7 +17,7 @@ public class RotateListRight {
         ListNode.Node head = node.insert();
 
         int length = 1;
-        int k= 2;
+        int k= 8;
 
         ListNode.Node newHead = head;
         ListNode.Node tail = head;
@@ -31,6 +31,7 @@ public class RotateListRight {
             tail = tail.next;
         }
 
+
         //Now tail is at last node (5) so change the tail next to head;
         tail.next = head;
 
@@ -39,7 +40,6 @@ public class RotateListRight {
 
         for( int i =1;i<length-k;i++) {
             Newtail = Newtail.next;
-
         }
 
 //        Node 4 is going to be new head, so before marking node3 next to null , save node3 next to  new head;
