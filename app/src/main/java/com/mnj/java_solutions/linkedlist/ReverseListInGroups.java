@@ -61,4 +61,45 @@ public class ReverseListInGroups {
         node.display(newHead);
     }
 
+
+    public void reve() {
+
+        ListNode node = new ListNode();
+        ListNode.Node head = node.insert();
+
+        ListNode.Node result = reverse(head,3);
+        node.display(result);
+    }
+
+
+    ListNode.Node reverse(ListNode.Node head, int k)
+    {
+        if(head == null)
+            return null;
+        ListNode.Node current = head;
+        ListNode.Node temp = null;
+        ListNode.Node prev = null;
+
+        int count = 0;
+
+        /* Reverse first k nodes of linked list */
+        while (count < k && current != null) {
+            temp = current.next;
+            current.next = prev;
+            prev = current;
+            current = temp;
+            count++;
+        }
+
+        /* next is now a pointer to (k+1)th node
+           Recursively call for the list starting from
+           current. And make rest of the list as next of
+           first node */
+        if (temp != null)
+            head.next = reverse(temp, k);
+
+        // prev is now head of input list
+        return prev;
+    }
+
 }
