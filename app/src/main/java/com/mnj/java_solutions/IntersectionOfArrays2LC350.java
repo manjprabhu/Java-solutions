@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class IntersectionOfArrays2 {
+public class IntersectionOfArrays2LC350 {
 
     void IntersectionOfArrays() {
         int[] nums1 = {1,2,2,1}, nums2 = {2,2};
