@@ -1,10 +1,9 @@
 package com.mnj.java_solutions;
 
-public class ClosestNumberToZero {
+public class ClosestNumberToZeroLC2239 {
 
 /*    Given an integer array nums of size n, return the number with the value closest to 0 in nums.
       If there are multiple answers, return the number with the largest value.*/
-
 
     void closestNumberToZero() {
         int[] a = {-4, -2, 1, 4, 8};

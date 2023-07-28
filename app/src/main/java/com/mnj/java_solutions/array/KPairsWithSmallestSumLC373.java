@@ -21,7 +21,7 @@ public class KPairsWithSmallestSumLC373 {
 
         int i, j;
         queue.add(new int[]{num1[0] + num2[0], 0, 0});  // adding (0,0,) pair to heap
-        visited.add(new Pair<Integer, Integer>(0, 0));  // also ma that particular pair as visited byt adding to set
+        visited.add(new Pair<Integer, Integer>(0, 0));  // also that particular pair as visited by adding to set
 
         while (!queue.isEmpty() && k-- > 0) {
             int[] min = queue.remove();
