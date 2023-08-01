@@ -63,14 +63,14 @@ public class LongestSubArrayWithSumK {
             }
 
             //                                prefixsum
-           // <-------------------------------------------------------------------------i>
-           // <-----------------------------------------------><------------------------->
-           // <          prefix-k                             >       k                  >
+            // <-------------------------------------------------------------------------i>
+            // <-----------------------------------------------><------------------------->
+            // <          prefix-k                             >       k                  >
 
 
             //Calculate the length and update max length
-            if (map.containsKey(prefixSum-k)) {
-                int len = i - map.get(prefixSum-k);
+            if (map.containsKey(prefixSum - k)) {
+                int len = i - map.get(prefixSum - k);
                 max = Math.max(max, len);
             }
 
@@ -80,6 +80,31 @@ public class LongestSubArrayWithSumK {
             }
         }
         System.out.println("==>>3 Length of the longest subArray with sum k is :" + max);
+    }
 
+
+    public void longestSubArrayWithSumK4() {
+
+        int[] a = {2, 3, 5, 1, 9};
+        long k = 10;
+        int n = a.length;
+        int maxLen = 0;
+        int i = 0;
+        int j = 0;
+
+        int sum = 0;
+        while (j < n) {
+            sum = sum + a[j];
+            if (sum == k) {
+                maxLen = Math.max(maxLen, j - i + 1);
+            } else if (sum > k) {
+                while (i <= j) {
+                    sum = sum - a[i];
+                    i++;
+                }
+            }
+            j++;
+        }
+        System.out.println("==>>4 Length of the longest subArray with sum k is :" + maxLen);
     }
 }
