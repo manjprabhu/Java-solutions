@@ -16,6 +16,7 @@ public class MaximumSumSubarrayOfSizeK {
 
         while (j < n) {
             currSum = currSum + arr[j];
+            //Increment j until window size is equal to k
             if (j - i + 1 < k) {
                 j++;
             } else if (j - i + 1 == k) {
