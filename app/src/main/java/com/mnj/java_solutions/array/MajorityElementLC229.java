@@ -38,17 +38,17 @@ public class MajorityElementLC229 {
         // int[] a = {7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 5, 5, 5, 5};
         int[] a = {11, 33, 33, 11, 33, 11, 11, 11, 4, 5};
 
-        int candidate1 = a[0];
-        int votes1 = 1;
+        int candidate1 = Integer.MIN_VALUE;
+        int votes1 = 0;
 
-        int candidate2 = a[1];
-        int votes2 = 1;
+        int candidate2 = Integer.MIN_VALUE;
+        int votes2 = 0;
 
         for (int j : a) {
             if (votes1 == 0 && j != candidate2) {
                 votes1 = 1;
                 candidate1 = j;
-            } else if (votes2 == 0 && j != candidate2) {
+            } else if (votes2 == 0 && j != candidate1) {
                 votes2 = 1;
                 candidate2 = j;
             } else if (j == candidate1) {
