@@ -5,22 +5,23 @@ package com.mnj.java_solutions.binarysearch;
  * a target value k. Now the array is rotated at some pivot point unknown to you.
  * Return True if k is present and otherwise, return False.
  **/
-public class SearchElementInSortedRotatedArray2 {
+public class SearchInRotatedSortedArrayLC81 {
 
     public void searchElementInSortedRotatedArray() {
-        int[] nums = {4, 5, 6, 7, 0, 1, 2};
-        int target = 7;
+        int[] nums = {2,5,6,0,0,1,2};
+        int target = 3;
 
         int low = 0;
         int high = nums.length - 1;
         int result = -1;
 
         while (low <= high) {
-            int mid = low + (high - low / 2);
+            int mid = low + (high - low )/2;
 
             if (nums[mid] == target) {
                 result = mid;
-                break;
+                System.out.println("==>> Element is present and found at position:"+result);
+                return;
             }
 
             /*
@@ -64,6 +65,7 @@ public class SearchElementInSortedRotatedArray2 {
             }
         }
 
-        System.out.println("==>> Element is found at Duplicate:"+result);
+        System.out.println("==>> Element is NOT present...");
+
     }
 }
