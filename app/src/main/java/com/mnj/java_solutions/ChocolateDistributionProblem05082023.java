@@ -51,6 +51,8 @@ public class ChocolateDistributionProblem05082023 {
         int m = 4;
         int n = 6;
 
+        Collections.sort(a);
+
         int min = Integer.MAX_VALUE;
 
         for(int i=0;i<=n-m+1;i++) {
