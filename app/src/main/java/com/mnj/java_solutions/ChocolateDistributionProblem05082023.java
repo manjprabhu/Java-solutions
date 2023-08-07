@@ -32,18 +32,20 @@ public class ChocolateDistributionProblem05082023 {
         int j = 0;
         int min = Integer.MAX_VALUE;
         while (j < n) {
-
-            if (j != m) {
+            if (j - i + 1 != m) {
                 j++;
             }
             if (j - i + 1 == m) {
-                if (a.get(j) - a.get(i) < min)
+
+                if (a.get(j) - a.get(i) < min) {
+
                     min = a.get(j) - a.get(i);
+                }
                 i++;
                 j++;
             }
         }
-        System.out.println("==>> Minimum chocolates are :" + min);
+        System.out.println("==>> 1 Minimum chocolates are :" + min);
     }
 
     public void findMinDiff2() {
@@ -55,11 +57,13 @@ public class ChocolateDistributionProblem05082023 {
 
         int min = Integer.MAX_VALUE;
 
-        for(int i=0;i<=n-m+1;i++) {
-            int j = i+m-1;
+        for (int i = 0; i < n - m + 1; i++) {
+            int j = i + m - 1;
 
             if (a.get(j) - a.get(i) < min)
-                min = a.get(j) - a.get(i);
+            min = a.get(j) - a.get(i);
         }
+
+        System.out.println("==>> 2 Minimum chocolates are :" + min);
     }
 }
