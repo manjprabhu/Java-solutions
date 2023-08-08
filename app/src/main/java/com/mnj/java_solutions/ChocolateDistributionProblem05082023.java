@@ -20,6 +20,8 @@ import java.util.Collections;
 
 
 public class ChocolateDistributionProblem05082023 {
+
+
     public void findMinDiff() {
 
         ArrayList<Integer> a = new ArrayList<>(Arrays.asList(11, 13, 7, 5, 13, 12));
@@ -61,7 +63,7 @@ public class ChocolateDistributionProblem05082023 {
             int j = i + m - 1;
 
             if (a.get(j) - a.get(i) < min)
-            min = a.get(j) - a.get(i);
+                min = a.get(j) - a.get(i);
         }
 
         System.out.println("==>> 2 Minimum chocolates are :" + min);
