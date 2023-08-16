@@ -21,7 +21,7 @@ package com.mnj.java_solutions;
  **/
 public class PascalsTriangle119 {
 
-    private static long nCr(int n, int r) {
+    private  long nCr(int n, int r) {
         long res = 1;
 
         // calculating nCr:
