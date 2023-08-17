@@ -6,6 +6,20 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeMap;
 
+/***
+ * Given an array A containing 2*N+2 positive numbers, out of which 2*N numbers exist in pairs
+ * whereas the other two number occur exactly once and are distinct.
+ * Find the other two numbers. Return in increasing order.
+ *
+ * Input:
+ * N = 2
+ * arr[] = {1, 2, 3, 2, 1, 4}
+ * Output:
+ * 3 4
+ * Explanation:
+ * 3 and 4 occur exactly once.
+ * **/
+
 public class NonRepeatingNumbers14082023 {
 
     public void singleNumber() {
@@ -60,5 +74,25 @@ public class NonRepeatingNumbers14082023 {
 
     public void singleNumber4() {
         int[] arr = {1, 2, 3, 2, 1, 4};
+
+        int n = 0;
+        for (int num : arr) {
+            n = n ^ num;
+        }
+
+        int r = n & -n;
+        int a = 0;
+        int b = 0;
+        for (int ele : arr) {
+            if ((r & ele) == 0)
+                a = a ^ ele;
+            else
+                b = b ^ ele;
+        }
+
+        int[] result = {a, b};
+        Arrays.sort(result);
+
+        System.out.println("==>> 4 Non repeating numbers are :" + result[0] + " and " + result[1]);
     }
 }
