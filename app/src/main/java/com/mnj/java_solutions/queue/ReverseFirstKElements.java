@@ -4,6 +4,24 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+/***
+ * Given an integer K and a queue of integers,
+ * we need to reverse the order of the first K elements of the queue,
+ * leaving the other elements in the same relative order.
+ *
+ * Input:
+ * 5 3
+ * 1 2 3 4 5
+ *
+ * Output:
+ * 3 2 1 4 5
+ *
+ * Explanation:
+ * After reversing the given
+ * input from the 3rd position the resultant
+ * output will be 3 2 1 4 5.
+ */
+
 public class ReverseFirstKElements {
 
     public void reverseQueue() {
