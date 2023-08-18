@@ -3,6 +3,8 @@ package com.mnj.java_solutions.array;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Problem Statement: Given an array of N integers,
@@ -57,5 +59,32 @@ public class ReplaceElementByRank {
             System.out.println(" 2 ==>> " + map.get(arr[i]) + " ");
         }
 
+    }
+
+    public void rankElements3() {
+        int n = 6;
+        int[] arr = {20, 15, 26, 2, 98, 6};
+        TreeMap<Integer, Integer> map = new TreeMap<>();
+
+        for (int i : arr) {
+            map.put(i, 0);
+        }
+
+        int rank = 1;
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            map.put(entry.getKey(), rank++);
+        }
+
+        int[] result = new int[arr.length];
+        int index = 0;
+
+        for (int i : arr) {
+            result[index++] = map.get(i);
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("3 ==>> " + result[i] + " ");
+        }
     }
 }
