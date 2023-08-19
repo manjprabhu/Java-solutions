@@ -2,6 +2,12 @@ package com.mnj.java_solutions.slidingwindow;
 
 import java.util.HashMap;
 
+/***
+ * Given an unsorted array A of size N that contains only positive integers,
+ * find a continuous sub-array that adds to a given number S and return the left and right index of that subarray.
+ *
+ * **/
+
 public class SubarraySumEqualsToKLC560 {
 
     public void subArraySum() {
