@@ -48,7 +48,7 @@ public class SubArrayWithZeroSum {
             //If current element is zero
             // if current sum is zero
             // if set already contains zero (in this case, subarray sum b/w current element)
-            if (num ==0 || sum == 0 || set.contains(sum)) {
+            if (num == 0 || sum == 0 || set.contains(sum)) {
                 System.out.println("==>>>3  There exists a subarray with zero sum");
                 return;
             }
