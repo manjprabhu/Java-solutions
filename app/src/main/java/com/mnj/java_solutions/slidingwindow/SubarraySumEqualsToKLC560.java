@@ -68,4 +68,29 @@ public class SubarraySumEqualsToKLC560 {
         }
         System.out.println("==>>3  Number of sub Arrays having sum k is :" + count);
     }
+
+
+    //Sliding window ( only for +ve numbers)
+    public void subArraySum4() {
+        int[] arr = {1, 2, 3, 7, 5};
+        int n = 5;
+        int sum = 12;
+
+        int currentSum = 0;
+        int start = 0;
+
+        for (int i = 0; i < n; i++) {
+            currentSum = currentSum + arr[i];
+
+            while (currentSum > sum && start < i) {
+                currentSum = currentSum - arr[start];
+                start++;
+            }
+
+            if (currentSum == sum) {
+                System.out.println("==>>4 Sub array found between " + (start + 1) + " and " + (i + 1));
+                return;
+            }
+        }
+    }
 }
