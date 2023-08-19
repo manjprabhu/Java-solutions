@@ -3,6 +3,13 @@ package com.mnj.java_solutions.array;
 import java.util.Arrays;
 import java.util.HashSet;
 
+/**
+ * Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+ * <p>
+ * There is only one repeated number in nums, return this repeated number.
+ * <p>
+ * You must solve the problem without modifying the ar540ray nums and uses only constant extra space.
+ **/
 public class DuplicateNumberLC287 {
 
     public void duplicateNumber() {
