@@ -15,7 +15,6 @@ public class CountOfAllSubArrayWithZeroSum {
                     sum = sum + a[k];
                 }
                 if (sum == 0) {
-
                     count++;
                 }
             }
@@ -44,8 +43,8 @@ public class CountOfAllSubArrayWithZeroSum {
         int prefixSum = 0;
         int count = 0;
 
-        for (int i = 0; i < a.length; i++) {
-            prefixSum = prefixSum + a[i];
+        for (int j : a) {
+            prefixSum = prefixSum + j;
 
             if (!map.containsKey(prefixSum))
                 map.put(prefixSum, 1);
