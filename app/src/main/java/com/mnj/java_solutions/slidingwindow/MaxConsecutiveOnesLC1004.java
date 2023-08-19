@@ -27,14 +27,13 @@ public class MaxConsecutiveOnesLC1004 {
         System.out.println("==>> Maximum number of ones are :" + (end - start));
     }
 
+    //Maintain a sliding window , where there is at most k zeros.
     public void longestOnes2() {
         int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
         int k = 2;
         int start = 0;
         int end = 0;
-
         int zeroCount = 0;
-
         int max = Integer.MIN_VALUE;
 
         while (end < nums.length) {

@@ -1,6 +1,6 @@
 package com.mnj.java_solutions;
 
-public class FindTheHighestAltitude {
+public class FindTheHighestAltitudeLC1732 {
 
     /*
      * There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes.
