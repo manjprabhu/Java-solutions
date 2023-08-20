@@ -67,8 +67,6 @@ public class SearchSingleElementSortedArray {
             }
 
             // We are in the left:
-
-
             if ((mid % 2 == 1 && arr.get(mid).equals(arr.get(mid - 1)))
                     || (mid % 2 == 0 && arr.get(mid).equals(arr.get(mid + 1)))) {
 

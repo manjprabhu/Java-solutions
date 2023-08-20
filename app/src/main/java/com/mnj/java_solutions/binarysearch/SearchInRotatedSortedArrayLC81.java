@@ -1,14 +1,25 @@
 package com.mnj.java_solutions.binarysearch;
 
 /**
+ * There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
+ * <p>
+ * Before being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed).
+ * <p>
+ * For example, [0,1,2,4,4,4,5,6,6,7] might be rotated at pivot index 5 and become [4,5,6,6,7,0,1,2,4,4].
+ * <p>
+ * Given the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.
+ * <p>
  * Given an integer array arr of size N, sorted in ascending order (may contain duplicate values) and
  * a target value k. Now the array is rotated at some pivot point unknown to you.
  * Return True if k is present and otherwise, return False.
+ * <p>
+ * Input: nums = [2,5,6,0,0,1,2], target = 0
+ * Output: true
  **/
 public class SearchInRotatedSortedArrayLC81 {
 
     public void searchElementInSortedRotatedArray() {
-        int[] nums = {2,5,6,0,0,1,2};
+        int[] nums = {2, 5, 6, 0, 0, 1, 2};
         int target = 3;
 
         int low = 0;
@@ -16,11 +27,11 @@ public class SearchInRotatedSortedArrayLC81 {
         int result = -1;
 
         while (low <= high) {
-            int mid = low + (high - low )/2;
+            int mid = low + (high - low) / 2;
 
             if (nums[mid] == target) {
                 result = mid;
-                System.out.println("==>> Element is present and found at position:"+result);
+                System.out.println("==>> Element is present and found at position:" + result);
                 return;
             }
 

@@ -64,7 +64,6 @@ public class NumberOfTimesArrayRotated {
                 high = mid - 1;
             }
         }
-
         System.out.println("==>> Array has been rotated by " + result + " times");
     }
 }

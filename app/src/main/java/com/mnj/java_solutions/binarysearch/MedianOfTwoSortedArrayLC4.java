@@ -1,6 +1,13 @@
 package com.mnj.java_solutions.binarysearch;
 
-public class MedianOfTwoSortedArray {
+/**
+ * Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+ * <p>
+ * Input: nums1 = [1,3], nums2 = [2]
+ * Output: 2.00000
+ * Explanation: merged array = [1,2,3] and median is 2.
+ **/
+public class MedianOfTwoSortedArrayLC4 {
 
     public void medianOfSortedArray() {
         int[] arr1 = {1, 4, 7, 10, 12};
