@@ -9,15 +9,13 @@ public class ReverseLinkedList {
 
         ListNode.Node curr = head;
         ListNode.Node prev = null;
-        ListNode.Node temp;
 
         while (curr != null) {
-            temp = curr.next;
+            ListNode.Node next = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = temp;
+            curr = next;
         }
-
         node.display(prev);
     }
 }
