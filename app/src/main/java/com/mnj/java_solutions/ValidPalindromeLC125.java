@@ -11,14 +11,13 @@ package com.mnj.java_solutions;
  * Output: true
  * Explanation: "amanaplanacanalpanama" is a palindrome.
  **/
-public class ValidPalindrome {
+public class ValidPalindromeLC125 {
 
     /*A phrase is a palindrome if, after converting all uppercase letters into lowercase letters
     and removing all non-alphanumeric characters,
     it reads the same forward and backward. Alphanumeric characters include letters and numbers.*/
 
     void isValidPalindrome() {
-
         String str = "A man, a plan, a canal: Panama";
 
         String fixed_String = "";
@@ -43,7 +42,6 @@ public class ValidPalindrome {
                 end--;
             }
         }
-
         System.out.println("==>> String is Palindrome");
     }
 }
