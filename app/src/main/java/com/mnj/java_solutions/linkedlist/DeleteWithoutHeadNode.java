@@ -8,6 +8,5 @@ public class DeleteWithoutHeadNode {
 
         deleteNode.data = deleteNode.next.data;
         deleteNode.next = deleteNode.next.next;
-
     }
 }

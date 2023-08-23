@@ -15,8 +15,8 @@ public class KthMissingPositiveNumber {
         int[] arr = {1, 2, 3, 4};
         int k = 2;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] <= k)
+        for (int j : arr) {
+            if (j <= k)
                 k++;
             else
                 break;

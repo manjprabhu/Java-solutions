@@ -26,10 +26,8 @@ public class DeleteMiddleElement {
             head.next = null;
             return;
         }
-
         slow.data = slow.next.data;
         slow.next = slow.next.next;
-
 
         System.out.println("==>> Linked list after deleting middle element .....");
         node.display(head);

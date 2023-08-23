@@ -16,7 +16,6 @@ public class CeilOfNumber {
             if(arr[mid] >= num) {
                 ans = arr[mid];
                 high = mid-1;
-
             } else {
                 low = mid+1;
             }

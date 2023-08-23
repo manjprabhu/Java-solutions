@@ -14,6 +14,5 @@ public class MiddleOfLinkedList {
             slow = slow.next;
         }
         System.out.println("==>> Middle of linked list is :" + slow.data);
-
     }
 }
