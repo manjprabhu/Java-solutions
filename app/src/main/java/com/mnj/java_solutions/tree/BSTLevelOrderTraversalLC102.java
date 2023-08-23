@@ -29,7 +29,7 @@ public class BSTLevelOrderTraversalLC102 {
             int size = queue.size();// number elements at each level
 
             // we need to return the value in list of list, this list
-            // holds the nodes at particulat level.
+            // holds the nodes at particular level.
             List<Integer> currentLevel = new ArrayList<>();
 
             while (size-- > 0) {
