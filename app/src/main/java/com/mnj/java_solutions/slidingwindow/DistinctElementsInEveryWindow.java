@@ -27,7 +27,6 @@ public class DistinctElementsInEveryWindow {
                 } else {
                     map.put(arr[start], map.get(arr[start]) - 1);
                 }
-
                 end++;
                 start++;
             }

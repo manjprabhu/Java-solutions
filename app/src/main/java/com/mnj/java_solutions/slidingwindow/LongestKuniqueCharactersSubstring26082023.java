@@ -1,4 +1,4 @@
-package com.mnj.java_solutions;
+package com.mnj.java_solutions.slidingwindow;
 
 import java.util.HashMap;
 

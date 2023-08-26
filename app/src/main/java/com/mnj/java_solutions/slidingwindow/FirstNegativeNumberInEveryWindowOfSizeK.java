@@ -39,11 +39,8 @@ public class FirstNegativeNumberInEveryWindowOfSizeK {
                 j++;
             }
         }
-
         for (Integer integer : result) {
             System.out.println("==>> result is :" + integer);
-
         }
-
     }
 }

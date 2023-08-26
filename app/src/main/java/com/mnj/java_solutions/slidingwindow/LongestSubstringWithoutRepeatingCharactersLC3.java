@@ -2,6 +2,19 @@ package com.mnj.java_solutions.slidingwindow;
 
 import java.util.HashSet;
 
+/**
+ * Given a string s, find the length of the longest
+ * substring
+ * without repeating characters.
+ * <p>
+ * Input: s = "abcabcbb"
+ * Output: 3
+ * Explanation: The answer is "abc", with the length of 3.
+ * <p>
+ * Input: s = "bbbbb"
+ * Output: 1
+ * Explanation: The answer is "b", with the length of 1.
+ **/
 public class LongestSubstringWithoutRepeatingCharactersLC3 {
 
     public void lengthOfLongestSubstring() {
@@ -49,7 +62,6 @@ public class LongestSubstringWithoutRepeatingCharactersLC3 {
                 i++;
             }
         }
-
         System.out.println("==>> 2 Length  Longest Substring Without Repeating Characters: " + max);
     }
 }

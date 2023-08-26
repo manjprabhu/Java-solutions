@@ -20,7 +20,6 @@ package com.mnj.java_solutions.slidingwindow;
 public class MinimumRecolorstoGetKConsecutiveBlackBlocksLC2379 {
 
     public void minimumRecolors() {
-
         String blocks = "WBBWWBBWBW";
         int k = 7;
 
