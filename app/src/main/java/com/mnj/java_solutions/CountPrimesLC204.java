@@ -57,7 +57,6 @@ public class CountPrimesLC204 {
 
                 for (int i = p * p; i <= n; i += p)
                     dp[i] = false;
-
             }
         }
 
