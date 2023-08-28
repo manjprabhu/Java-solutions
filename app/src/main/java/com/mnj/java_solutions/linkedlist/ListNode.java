@@ -4,12 +4,12 @@ public class ListNode {
 
     public Node insert() {
         Node l1 = new Node(4);
-        Node l2 = new Node(5);
-        Node l3 = new Node(6);
+        Node l2 = new Node(4);
+        Node l3 = new Node(5);
         Node l4 = new Node(7);
-        Node l5 = new Node(15);
-        Node l6 = new Node(5);
-        Node l7 = new Node(4);
+        Node l5 = new Node(7);
+        Node l6 = new Node(8);
+        Node l7 = new Node(9);
         Node l8 = new Node(11);
 
         l1.next = l2;
@@ -41,7 +41,6 @@ public class ListNode {
     }
 
 
-
     public Node sortedListTwo() {
         Node l1 = new Node(7);
         Node l2 = new Node(8);
@@ -59,6 +58,7 @@ public class ListNode {
     }
 
     void display(Node head) {
+        System.out.println("==>> ***************** Content of LinkedList  *************************");
         while (head != null) {
             System.out.println("==>> " + head.data);
             head = head.next;
