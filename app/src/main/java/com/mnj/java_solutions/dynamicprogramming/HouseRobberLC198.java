@@ -15,17 +15,19 @@ public class HouseRobberLC198 {
 
     public void rob() {
         int[] nums = {6, 9, 6};
-        int oddSum = 0;
-        int evenSum = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            if (i % 2 == 0) {
-                evenSum = evenSum + nums[i];
-            } else {
-                oddSum = oddSum + nums[i];
-            }
+
+        if (nums.length == 0) {
+            System.out.println("==>>Nothing to loot");
+            return;
         }
-        int maxLoot = Math.max(oddSum, evenSum);
-        System.out.println("==>> Maximum loot is :" + maxLoot);
+        int[] dp = new int[nums.length + 1];
+        dp[0] = 0;
+        dp[1] = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            int maxLoot = Math.max(dp[i], dp[i - 1] + nums[i]);
+            System.out.println("==>> Maximum loot is :" + maxLoot);
+        }
     }
 
     public void rob2() {

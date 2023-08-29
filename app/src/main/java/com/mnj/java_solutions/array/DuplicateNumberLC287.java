@@ -49,7 +49,6 @@ public class DuplicateNumberLC287 {
         }
     }
 
-
     //Similar approach as linked list cycle detection.
     public void duplicateNumber4() {
         int[] nums = {1, 3, 4, 2, 2};

@@ -31,7 +31,6 @@ public class SortLinkedListOf0s1s2s {
                 temp = temp.next;
             }
         }
-
         node.display(head);
     }
 }

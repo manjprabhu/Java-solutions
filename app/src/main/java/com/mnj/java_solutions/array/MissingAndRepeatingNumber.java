@@ -3,8 +3,8 @@ package com.mnj.java_solutions.array;
 public class MissingAndRepeatingNumber {
 
     public void missingAndRepeatedNumber() {
-        int[] arr = {1, 2, 3, 3};
-        int n = 4;
+        int[] arr = {3,1,3};
+        int n = arr.length;
         for (int i = 1; i <= n; i++) {
             int count = 0;
             for (int k : arr) {
@@ -13,14 +13,13 @@ public class MissingAndRepeatingNumber {
                 }
             }
             if (count == 2)
-                System.out.println("==>> Repeated number is :" + i);
+                System.out.println("==>> Repeated Number is :" + i);
             else if (count == 0)
-                System.out.println("==>> Missing number is :" + i);
+                System.out.println("==>> Missing Number is :" + i);
         }
     }
 
     public void missingAndRepeatedNumber2() {
-
         int[] arr = {4, 3, 6, 2, 1, 1};
         int n = 6;
         int[] count = new int[n + 1];
@@ -42,7 +41,6 @@ public class MissingAndRepeatingNumber {
     public void missingAndRepeatedNumber3() {
         int[] arr = {4, 3, 6, 2, 1, 1};
         int n = 6;
-
 
         //s1-sum  = x-y
         //s2-sum2n

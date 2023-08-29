@@ -20,9 +20,11 @@ public class DeleteNodeHavingGreaterValueOnRight29082023 {
         ListNode node = new ListNode();
         ListNode.Node head = node.insert();
 
+        //reverse the LinkedList
         head = reverse(head);
         ListNode.Node temp = head;
 
+        //loop through the list and delete the element that is smaller than the current element
         while (temp != null && temp.next != null) {
             if (temp.data > temp.next.data) {
                 temp.next = temp.next.next;
@@ -30,6 +32,7 @@ public class DeleteNodeHavingGreaterValueOnRight29082023 {
                 temp = temp.next;
             }
         }
+        //as we have reversed the original list, resultant list will in reverse order, hence again reverse the list to get the result in correct order.
         node.display(reverse(head));
     }
 
@@ -43,5 +46,6 @@ public class DeleteNodeHavingGreaterValueOnRight29082023 {
             prev = curr;
             curr = next;
         }
+        return prev;
     }
 }
