@@ -2,7 +2,11 @@ package com.mnj.java_solutions.linkedlist;
 
 import java.util.Stack;
 
-public class LinkedListPalindrome {
+/**
+ * Given the head of a singly linked list, return true if it is a  palindrome or false otherwise.
+ *
+ *  **/
+public class LinkedListPalindromeLC234 {
 
     public void isPalindrome() {
 
