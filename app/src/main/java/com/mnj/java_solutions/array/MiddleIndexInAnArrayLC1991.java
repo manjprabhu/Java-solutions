@@ -13,7 +13,7 @@ package com.mnj.java_solutions.array;
  **/
 public class MiddleIndexInAnArrayLC1991 {
 
-    public int findMiddleIndex() {
+    public void  findMiddleIndex() {
         int[] nums = {2, 3, -1, 8, 4};
         int sum = 0;
         int leftSum = 0;
