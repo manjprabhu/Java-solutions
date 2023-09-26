@@ -3,6 +3,7 @@ package com.mnj.java_solutions.twopointer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * iven an array A of integers and another number K. Find all the unique quadruple from the given array that sums up to K.
@@ -63,7 +64,62 @@ public class FindAllFourSumNumbers26092023 {
                 }
             }
         }
+    }
+
+    //Leetcode solution to handle some of the test cases
+
+    public void fourSum2() {
+
+        int[] arr = {0, 0, 2, 1, 1};
+        int k = 3;
+
+        int n = arr.length;
+        List<List<Integer>> ans = new ArrayList<>();
+
+        // sort the given array:
+        Arrays.sort(arr);
 
 
+        for (int i = 0; i < n; i++) {
+
+            // avoid the duplicates while moving i:
+            if (i > 0 && arr[i] == arr[i - 1])
+                continue;
+
+            for (int j = i + 1; j < n; j++) {
+
+                // avoid the duplicates while moving j:
+                if (j > i + 1 && arr[j] == arr[j - 1])
+                    continue;
+
+                // 2 pointers:
+                int start = j + 1;
+                int end = n - 1;
+                while (start < end) {
+                    long sum = arr[i];
+                    sum += arr[j];
+                    sum += arr[start];
+                    sum += arr[end];
+                    if (sum == k) {
+                        List<Integer> temp = new ArrayList<>();
+                        temp.add(arr[i]);
+                        temp.add(arr[j]);
+                        temp.add(arr[start]);
+                        temp.add(arr[end]);
+                        ans.add(temp);
+                        start++;
+                        end--;
+
+                        // skip the duplicates:
+                        while (start < end && arr[start] == arr[start - 1])
+                            start++;
+                        while (start < end && arr[end] == arr[end + 1])
+                            end--;
+                    } else if (sum < k)
+                        start++;
+                    else end--;
+                }
+            }
+        }
     }
 }
