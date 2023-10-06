@@ -24,7 +24,7 @@ public class CountNumberOfSubstrings05102023 {
 
     public void substrCount() {
 
-        String S = "aba", int K = 2
+        String S = "aba"; int K = 2;
 
         long result =  atmost(S, K) - atmost(S, K - 1);
         System.out.println("==>> Result :"+result);

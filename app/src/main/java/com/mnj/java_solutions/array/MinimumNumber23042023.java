@@ -35,8 +35,8 @@ public class MinimumNumber23042023 {
         int ans = 0;
         int[] arr = {3, 2, 4};
 
-        for (int i = 0; i < n; i++) {
-            ans = gcd(ans, arr[i]);
+        for (int j : arr) {
+            ans = gcd(ans, j);
         }
         System.out.println("==>> Result is :" + ans);
     }
