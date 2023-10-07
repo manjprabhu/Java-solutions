@@ -38,13 +38,13 @@ public class TypeIt25012023 {
         int h = n;
         while (l <= h) {
             int mid = (l + h) / 2 - 1;   //o+7/2 -1 =2
-            if (str.substring(0, mid + 1).equals(s.substring(mid + 1, 2 * (mid + 1)))) {
+            if (str.substring(0, mid + 1).equals(str.substring(mid + 1, 2 * (mid + 1)))) {
                 int operation = mid + 1 + 1 + (n - 2 * (mid + 1));
-                System.out.println("==>> Minium operation required is :" + operation);
+                System.out.println("==>> Minimum operation required is :" + operation);
                 return;
             }
             h--;
         }
-        System.out.println("==>> Minium operation required is " + n);
+        System.out.println("==>> Minimum operation required is " + n);
     }
 }
