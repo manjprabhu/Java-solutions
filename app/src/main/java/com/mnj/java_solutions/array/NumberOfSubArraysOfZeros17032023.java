@@ -24,8 +24,8 @@ public class NumberOfSubArraysOfZeros17032023 {
         int N = arr.length;
         long ans = 0;
         long cnt = 0;
-        for (int i = 0; i < N; i++) {
-            if (arr[i] == 0)
+        for (int j : arr) {
+            if (j == 0)
                 cnt++;
             else {
                 ans += (cnt + 1) * cnt / 2;
