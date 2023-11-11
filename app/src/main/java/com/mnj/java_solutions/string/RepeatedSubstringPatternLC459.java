@@ -29,16 +29,17 @@ public class RepeatedSubstringPatternLC459 {
 
         int n = str.length();
 
+        //Maximum length of substring can be considered is n/2
         for (int l = n / 2; l >= 1; l--) {
 
-            if (n % l == 0) {
+            if (n % l == 0) { // if l is length of substring , if(n%l ==0) then only we can consider that length substring
 
-                int times = n / l;
-                String pattern = str.substring(0, l);
+                int times = n / l; // How many times substring needs to appended to make original string
+                String pattern = str.substring(0, l);  // take that substring
                 StringBuilder newStr = new StringBuilder();
 
                 while (times > 0) {
-                    newStr.append(pattern);
+                    newStr.append(pattern); // keep on appending the substring to result string.
                     times--;
                 }
 
