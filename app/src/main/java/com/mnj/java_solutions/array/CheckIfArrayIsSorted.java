@@ -4,7 +4,8 @@ public class CheckIfArrayIsSorted {
 
     public void isSortedArray() {
 
-        int arr[] = {1, 2, 3, 4, 5,2}, n = arr.length;
+        int[] arr = {1, 2, 3, 4, 5,2};
+        int n = arr.length;
 
         for (int i = 1; i < n; i++) {
             if (arr[i] < arr[i - 1]) {
