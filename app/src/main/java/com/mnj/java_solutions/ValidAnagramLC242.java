@@ -1,4 +1,4 @@
-package com.mnj.java_solutions;
+package com.mnj.java_solutions
 
 /***
  * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
@@ -15,35 +15,35 @@ package com.mnj.java_solutions;
  *
  * Input: s = "rat", t = "car"
  * Output: false
- * ***/
-public class ValidAnagramLC242 {
+ */
+class ValidAnagramLC242 {
+    //Fill the bucket array
 
-    void isValidAnagram() {
-        String st1 = "anagram";
-        String st2 = "nagaramm";
-
-        if (st1.length() != st2.length()) {
-            System.out.println("==>> False");
-            return;
-        }
-
-        int[] char_counts = new int[26];
-
-        //Fill the bucket array
-        for (int i = 0; i < st1.length(); i++) {
-            char_counts[st1.charAt(i) - 'a']++;
-        }
-
-        //Empty the bucket array
-        for (int i = 0; i < st2.length(); i++) {
-            char_counts[st2.charAt(i) - 'a']--;
-        }
-
-        for (int count : char_counts) {
-            if (count != 0) {
-                System.out.println("==>> False");
+    //Empty the bucket array
+    val isValidAnagram: Unit
+        get() {
+            val st1 = "anagram"
+            val st2 = "nagaramm"
+            if (st1.length != st2.length) {
+                println("==>> False")
+                return
             }
+            val char_counts = IntArray(26)
+
+            //Fill the bucket array
+            for (i in 0 until st1.length) {
+                char_counts[st1[i] - 'a']++
+            }
+
+            //Empty the bucket array
+            for (i in 0 until st2.length) {
+                char_counts[st2[i] - 'a']--
+            }
+            for (count in char_counts) {
+                if (count != 0) {
+                    println("==>> False")
+                }
+            }
+            println("==>> True")
         }
-        System.out.println("==>> True");
-    }
 }
