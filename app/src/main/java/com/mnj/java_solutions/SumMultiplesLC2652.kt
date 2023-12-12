@@ -1,4 +1,4 @@
-package com.mnj.java_solutions;
+package com.mnj.java_solutions
 
 /**
  *
@@ -19,18 +19,16 @@ package com.mnj.java_solutions;
  * Output: 40
  * Explanation: Numbers in the range [1, 10] that are divisible by 3, 5, or 7 are 3, 5, 6, 7, 9, 10. The sum of these numbers is 40.
  *
- * **/
-public class SumMultiplesLC2652 {
-
-    void sumOfMultiples() {
-        int n = 10;
-        int sum = 0;
-
-        for (int i = 1; i <= n; i++) {
+ */
+class SumMultiplesLC2652 {
+    fun sumOfMultiples() {
+        val n = 10
+        var sum = 0
+        for (i in 1..n) {
             if (i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
-                sum = sum + i;
+                sum += i
             }
         }
-        System.out.println("==>> Sum of multiples:" + sum);
+        println("==>> Sum of multiples:$sum")
     }
 }
