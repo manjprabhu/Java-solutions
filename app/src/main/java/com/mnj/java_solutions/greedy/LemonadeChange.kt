@@ -1,9 +1,8 @@
-package com.mnj.java_solutions.greedy;
+package com.mnj.java_solutions.greedy
 
-public class LemonadeChange {
-
+class LemonadeChange {
     //860. Lemonade Change
-   /* At a lemonade stand, each lemonade costs $5. Customers are standing in a queue to buy from you and order
+    /* At a lemonade stand, each lemonade costs $5. Customers are standing in a queue to buy from you and order
     one at a time (in the order specified by bills). Each customer will only buy one lemonade and pay with
     either a $5, $10, or $20 bill. You must provide the correct change to each customer so that the net
     transaction is that the customer pays $5.
@@ -12,33 +11,27 @@ public class LemonadeChange {
 
     Given an integer array bills where bills[i] is the bill the ith customer pays, return true if
     you can provide every customer with the correct change, or false otherwise.*/
-
-
-    void lemonadeChange() {
-        int[] bills = {5, 5, 5, 10, 20};
-
-        int fives = 0;
-        int tens = 0;
-
-        for (int bill : bills) {
-
+    fun lemonadeChange() {
+        val bills = intArrayOf(5, 5, 5, 10, 20)
+        var fives = 0
+        var tens = 0
+        for (bill in bills) {
             if (bill == 5) {
-                fives++;
+                fives++
             } else if (bill == 10) {
-                tens++;
-                fives--;
+                tens++
+                fives--
             } else if (tens > 0) {
-                tens--;
-                fives--;
+                tens--
+                fives--
             } else {
-                fives = fives - 3;
+                fives -= 3
             }
-
             if (fives < 0) {
-                System.out.println("==>> Cannot provide exact change to every customer.");
-                return;
+                println("==>> Cannot provide exact change to every customer.")
+                return
             }
         }
-        System.out.println("==>> Can  provide exact change to every customer.");
+        println("==>> Can  provide exact change to every customer.")
     }
 }
