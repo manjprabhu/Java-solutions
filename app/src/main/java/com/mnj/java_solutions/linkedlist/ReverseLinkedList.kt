@@ -15,5 +15,6 @@ class ReverseLinkedList {
             curr = next
         }
         node.display(prev)
+
     }
 }
