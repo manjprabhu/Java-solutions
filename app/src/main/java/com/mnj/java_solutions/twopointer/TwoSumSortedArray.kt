@@ -1,4 +1,4 @@
-package com.mnj.java_solutions
+package com.mnj.java_solutions.twopointer
 
 class TwoSumSortedArray {
     fun twoSumPair() {
