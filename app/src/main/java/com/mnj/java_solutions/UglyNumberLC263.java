@@ -32,7 +32,6 @@ public class UglyNumberLC263 {
             System.out.println("==>> Not an ugly number ");
             return;
         }
-
         while (n % 2 == 0)
             n = n / 2;
         while (n % 3 == 0)
@@ -45,6 +44,5 @@ public class UglyNumberLC263 {
         } else {
             System.out.println("==>> Ugly number ");
         }
-
     }
 }
