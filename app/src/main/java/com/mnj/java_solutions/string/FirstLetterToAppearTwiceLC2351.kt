@@ -1,6 +1,6 @@
-package com.mnj.java_solutions.string;
+package com.mnj.java_solutions.string
 
-import java.util.HashSet;
+import java.util.HashSet
 
 /**
  * Given a string s consisting of lowercase English letters, return the first letter to appear twice.
@@ -19,18 +19,15 @@ import java.util.HashSet;
  * The letter 'z' appears on the index 8.
  * The letter 'c' is the first letter to appear twice, because out of all the letters the index of its second occurrence is the smallest.
  *
- * **/
-public class FirstLetterToAppearTwiceLC2351 {
-
-    public void repeatedCharacter() {
-        String s = "abcdd";
-
-        HashSet<Character> set = new HashSet<>();
-
-        for (int i = 0; i < s.length(); i++) {
-            if (!set.add(s.charAt(i))) {
-                System.out.println("==>> First repeated char is :" + s.charAt(i));
-                return;
+ */
+class FirstLetterToAppearTwiceLC2351 {
+    fun repeatedCharacter() {
+        val s = "abcdd"
+        val set = HashSet<Char>()
+        for (i in s.indices) {
+            if (!set.add(s[i])) {
+                println("==>> First repeated char is :" + s[i])
+                return
             }
         }
     }
