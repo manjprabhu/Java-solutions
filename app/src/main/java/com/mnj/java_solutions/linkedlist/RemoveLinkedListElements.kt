@@ -1,7 +1,5 @@
 package com.mnj.java_solutions.linkedlist
 
-import com.mnj.java_solutions.linkedlist.ListNode
-
 class RemoveLinkedListElements {
     fun removeElements() {
         val node = ListNode()
@@ -11,7 +9,7 @@ class RemoveLinkedListElements {
             head = head.next
         }
         var current_node = head
-        while (current_node != null && current_node.next != null) {
+        while (current_node?.next != null) {
             //If next element is element to be removed then just change the pointer
             // [1,2,6,3,4,5,6]
             // 2.next.next = 3;
