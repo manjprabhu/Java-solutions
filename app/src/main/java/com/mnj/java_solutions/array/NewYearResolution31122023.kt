@@ -35,6 +35,8 @@ Output: 0
 Explanation: There is no way Geek can become eligible.
 
  **/
+
+//solution : If we can get sum divisible by 20 or 24 or sum == 2024 return true else false
 class NewYearResolution31122023 {
 
     fun isPossible(N: Int, coins: IntArray?): Boolean {
