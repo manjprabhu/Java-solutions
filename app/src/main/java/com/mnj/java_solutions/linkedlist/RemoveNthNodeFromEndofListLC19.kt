@@ -61,7 +61,7 @@ to remove the nth node from the end.
 and we return the the start.nextstart.nextstart.next , because it was head of given LL.
 
  */
-class RemoveNthNodeFromEndofList {
+class RemoveNthNodeFromEndofListLC19 {
     fun removeNthFromEnd() {
         val node = ListNode()
         val head = node.insert()
