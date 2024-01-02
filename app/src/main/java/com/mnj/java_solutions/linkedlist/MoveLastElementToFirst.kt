@@ -1,7 +1,5 @@
 package com.mnj.java_solutions.linkedlist
 
-import com.mnj.java_solutions.linkedlist.ListNode
-
 class MoveLastElementToFirst {
     fun move() {
         val node = ListNode()
