@@ -8,13 +8,17 @@ class FirstMissingElementLC41 {
         val minHeap = PriorityQueue<Int>()
         // Add all the positive numbers in the PriorityQueue
         for (num in nums) {
-            if (num > 0) minHeap.add(num)
+            if (num > 0)
+                minHeap.add(num)
         }
         var missingElement = 1
         // Check for all minimum missing positive number
         while (!minHeap.isEmpty()) {
             val element = minHeap.poll()
-            if (element == missingElement) missingElement++ else if (element > missingElement) break
+            if (element == missingElement)
+                missingElement++ 
+            else if (element > missingElement)
+                break
         }
         println("==>> Missing number :$missingElement")
     }
