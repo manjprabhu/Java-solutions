@@ -37,8 +37,8 @@ class DetectTheCapitalLC520 {
                 }
             }
         } else {
-            for (i in 0 until str.length) {
-                if (Character.isUpperCase(str[i])) {
+            for (element in str) {
+                if (Character.isUpperCase(element)) {
                     println("==>> False")
                     return
                 }

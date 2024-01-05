@@ -19,8 +19,6 @@ class ReverseString {
 
         var start = 0
         var end = s.length - 1
-        StringBuilder()
-
         val c = s.toCharArray()
 
         while (start <= end) {
@@ -30,7 +28,6 @@ class ReverseString {
             end--
             start++
         }
-
-        println("==>> TWO  Reverse string : ${c.toString()}")
+        println("==>> TWO  Reverse string : $c")
     }
 }

@@ -1,11 +1,10 @@
 package com.mnj.java_solutions.string;
 
 /**
- * The power of the string is the maximum length of a non-empty substring that contains only one unique character.
+ * The power of the string is the maximum length of a non-empty substring that contains only one
+ * unique character.
  *
  * Given a string s, return the power of s.
- *
- *
  *
  * Example 1:
  *
@@ -17,7 +16,6 @@ package com.mnj.java_solutions.string;
  * Input: s = "abbcccddddeeeeedcba"
  * Output: 5
  * Explanation: The substring "eeeee" is of length 5 with the character 'e' only.
- *
  *
  *  **/
 public class ConsecutiveCharactersLC1446 {
@@ -35,7 +33,6 @@ public class ConsecutiveCharactersLC1446 {
                 prev = s.charAt(i);
             }
         }
-
         System.out.println("==>> Max count is :"+max_count);
     }
 }
