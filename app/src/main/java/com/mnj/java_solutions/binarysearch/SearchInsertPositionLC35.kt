@@ -6,10 +6,8 @@ package com.mnj.java_solutions.binarysearch
  *
  * If not, return the index where it would be if it were inserted in order.
  *
- *
  * Input: nums = [1,3,5,6], target = 5
  * Output: 2
- *
  *
  * Input: nums = [1,3,5,6], target = 7
  * Output: 4
