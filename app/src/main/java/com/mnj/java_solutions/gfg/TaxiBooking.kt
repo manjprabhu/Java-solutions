@@ -1,4 +1,4 @@
-package com.mnj.java_solutions.gfg;
+package com.mnj.java_solutions.gfg
 
 /**
  * You are going to book a taxi. There are infinite number of points 1, 2, 3... on the X axis and your current position is cur.
@@ -6,8 +6,10 @@ package com.mnj.java_solutions.gfg;
  * Where pos[i] denotes the position of the ith taxi. You are also given an array time.
  * Where time[i] denotes the time taken by the ith taxi to cover 1 unit of distance.
  * Your task is to find the minimum time to board a taxi.
- * <p>
- * <p>
+ *
+ *
+ *
+ *
  * Input:
  * N = 3, cur = 4
  * pos = [1, 5, 6]
@@ -20,21 +22,17 @@ package com.mnj.java_solutions.gfg;
  * Total time taken by the 3rd taxi will be: (6-4)*1 = 2
  * So, the minimum time will be 2 sec.
  */
-
-public class TaxiBooking {
-
-    public void taxiBooking() {
-        int N = 3;
-        int cur = 4;
-        int[] pos = {1, 5, 6};
-        int[] time = {2, 3, 1};
-
-        int result = Integer.MAX_VALUE;
-        for (int i = 0; i < N; i++) {
-            int distance = time[i] * Math.abs(cur - pos[i]);
-            result = Math.min(distance, result);
+class TaxiBooking {
+    fun taxiBooking() {
+        val N = 3
+        val cur = 4
+        val pos = intArrayOf(1, 5, 6)
+        val time = intArrayOf(2, 3, 1)
+        var result = Int.MAX_VALUE
+        for (i in 0 until N) {
+            val distance = time[i] * Math.abs(cur - pos[i])
+            result = Math.min(distance, result)
         }
-
-        System.out.println("==>> Minimum time taken by taxi is :" + result);
+        println("==>> Minimum time taken by taxi is :$result")
     }
 }
