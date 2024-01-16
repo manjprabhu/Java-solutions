@@ -1,6 +1,5 @@
 package com.mnj.java_solutions
 
-import java.util.*
 /**
  * Given a string s, find the longest palindromic subsequence's length in s.
 
