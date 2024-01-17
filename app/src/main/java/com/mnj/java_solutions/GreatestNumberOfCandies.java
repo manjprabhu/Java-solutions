@@ -1,29 +1,21 @@
-package com.mnj.java_solutions;
+package com.mnj.java_solutions
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayList
 
-public class GreatestNumberOfCandies {
-
-    void kidsWithCandies() {
-
-        int[] candies = {2, 3, 5, 1, 3};
-        int extraCandies = 3;
-
-        int max = Integer.MIN_VALUE;
-
-        List<Boolean> list = new ArrayList();
-
-        for(int candy : candies) {
-            max = Math.max(max, candy);
+class GreatestNumberOfCandies {
+    fun kidsWithCandies() {
+        val candies = intArrayOf(2, 3, 5, 1, 3)
+        val extraCandies = 3
+        var max = Int.MIN_VALUE
+        val list: Any? = ArrayList<Any?>()
+        for (candy in candies) {
+            max = Math.max(max, candy)
         }
-
-        for(int candy : candies) {
-            list.add(extraCandies + candy >= max);
+        for (candy in candies) {
+            list.add(extraCandies + candy >= max)
         }
-
-        for (boolean candy : list) {
-            System.out.println("==>>  Item:" + candy);
+        for (candy in list) {
+            println("==>>  Item:$candy")
         }
     }
 }
