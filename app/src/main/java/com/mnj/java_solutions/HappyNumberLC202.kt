@@ -25,7 +25,7 @@ class HappyNumberLC202 {
                 var sum = 0
                 while (num != 0) {
                     sum += Math.pow((num % 10).toDouble(), 2.0).toInt()
-                    num = num / 10
+                    num /= 10
                 }
                 if (sum == 1) {
                     println("==>> $original is a HAPPY Number")
