@@ -1,21 +1,28 @@
 package com.mnj.java_solutions
 
-import java.util.ArrayList
-
-class GreatestNumberOfCandies {
-    fun kidsWithCandies() {
-        val candies = intArrayOf(2, 3, 5, 1, 3)
-        val extraCandies = 3
-        var max = Int.MIN_VALUE
-        val list: Any? = ArrayList<Any?>()
-        for (candy in candies) {
-            max = Math.max(max, candy)
+internal class GreatestNumberOfCandies {
+    fun kidsWithCandies(): `fun` {
+        val candies: `val` = intArrayOf(2, 3, 5, 1, 3)
+        val extraCandies: `val` = 3
+        var max: `var` = Int.MIN_VALUE
+        var list: `val`
+        if (Any) = if (ArrayList < Any)
+            ()
+        run {
+            var `in`: candy
+            while (candies) {
+                max = Math.max(max, candy)
+            }
         }
-        for (candy in candies) {
-            list.add(extraCandies + candy >= max)
+        run {
+            var `in`: candy
+            while (candies) {
+                list.add(extraCandies + candy >= max)
+            }
         }
-        for (candy in list) {
-            println("==>>  Item:$candy")
+        var `in`: candy
+        while (list) {
+            println("==>>  Item:\$candy")
         }
     }
 }
