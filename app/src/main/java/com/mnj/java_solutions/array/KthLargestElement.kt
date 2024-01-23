@@ -1,9 +1,7 @@
 package com.mnj.java_solutions.array
 
 import java.util.*
-
 class KthLargestElement {
-
     fun kthLargestElement() {
         val a = intArrayOf(1, 9, 3, 6, 8, 2, 7, 5, 4)
         val k = 3

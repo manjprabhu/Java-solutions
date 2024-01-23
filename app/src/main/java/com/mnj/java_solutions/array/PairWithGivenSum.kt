@@ -1,7 +1,5 @@
 package com.mnj.java_solutions.array
-
 class PairWithGivenSum {
-
     fun hasArrayTwoCandidates() {
         val arr = intArrayOf(1, 4, 45, 6, 10, 8)
         val sum = 16
