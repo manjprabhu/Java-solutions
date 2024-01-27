@@ -1,4 +1,4 @@
-package com.mnj.java_solutions.linkedlist;
+package com.mnj.java_solutions.linkedlist
 
 /**
  * iven a linked list, you have to perform the following task:
@@ -24,54 +24,42 @@ package com.mnj.java_solutions.linkedlist;
  * 1 3 5 4 2
  * Explanation:
  * Alternative nodes in the given linked list are 2 and 4. Reversing the alternative nodes from the given list, and then appending them to the end of the list results in a list 1->3->5->4->2.
- * **/
-public class ReverseAlternateNodesInLinkList06102023 {
-
-    public void rearrange() {
-        ListNode node = new ListNode();
-        ListNode.Node odd = node.insert();
-
-        if (odd.next == null)
-            return;
-
-        ListNode.Node h1 = odd;
-        ListNode.Node h2 = odd.next;
-        ListNode.Node t1 = h1;
-        ListNode.Node t2 = h2;
-
+ */
+class ReverseAlternateNodesInLinkList06102023 {
+    fun rearrange() {
+        val node = ListNode()
+        val odd = node.insert()
+        if (odd.next == null) return
+        val h2 = odd.next
+        var t1 = odd
+        var t2 = h2
         while (true) {
-            t1.next = t1.next.next;
-            t1 = t1.next;
-
+            t1.next = t1.next.next
+            t1 = t1.next
             if (t2.next.next == null) {
-                t1.next = null;
-                break;
+                t1.next = null
+                break
             }
-
-            t2.next = t1.next;
-            t2 = t2.next;
-
+            t2.next = t1.next
+            t2 = t2.next
             if (t1.next.next == null) {
-                t1.next = null;
-                break;
-
+                t1.next = null
+                break
             }
         }
-
-        t2.next = null;
-        t1.next = reverse(h2);
+        t2.next = null
+        t1.next = reverse(h2)
     }
 
-    private ListNode.Node reverse(ListNode.Node head) {
-        ListNode.Node curr = head;
-        ListNode.Node prev = null;
-
+    private fun reverse(head: ListNode.Node): ListNode.Node? {
+        var curr: ListNode.Node? = head
+        var prev: ListNode.Node? = null
         while (curr != null) {
-            ListNode.Node next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+            val next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
         }
-        return prev;
+        return prev
     }
 }
