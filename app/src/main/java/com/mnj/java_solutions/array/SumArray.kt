@@ -16,6 +16,25 @@ class SumArray {
             result.add(sum)
             i += 2
         }
+
+        //Alternative type of loop
+       /* for(i in 0.. arr.size step 2) {
+            var sum =0
+            sum = if(i == arr.size-1)
+                arr[i]
+            else
+                arr[i]+arr[i+1]
+            result.add(sum)
+        }
+
+        for(i in arr.indices step 2) {
+            var sum =0
+            sum = if(i == arr.size-1)
+                arr[i]
+            else
+                arr[i]+arr[i+1]
+            result.add(sum)
+            */
         for (x in result) println("==>> Result : $x")
     }
 }
