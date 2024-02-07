@@ -2,8 +2,12 @@ package com.mnj.java_solutions.array
 
 class CountMoreThanOccurences23122023 {
 
-    fun countOccurence(arr: IntArray, n: Int, k: Int) {
+    fun countOccurence(k: Int) {
+        var arr = intArrayOf(1,2,3,3,1,7,8)
+        val n = arr.size
+
         var k = k
+
         val hm: HashMap<Int, Int> = HashMap()
         k = n / k
         val set: HashSet<Int> = HashSet()
