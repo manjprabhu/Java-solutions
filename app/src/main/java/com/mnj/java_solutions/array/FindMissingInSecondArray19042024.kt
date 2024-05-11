@@ -32,8 +32,6 @@ package com.mnj.java_solutions.array
  */
 class FindMissingInSecondArray19042024 {
     fun findMissing() {
-        val n = 6
-        val m = 5
         val a = intArrayOf(1, 2, 3, 4, 5, 10)
         val b = intArrayOf(2, 3, 1, 0, 5)
         val al = ArrayList<Int>()
