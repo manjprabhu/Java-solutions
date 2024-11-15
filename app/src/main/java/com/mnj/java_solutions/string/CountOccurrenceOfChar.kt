@@ -12,6 +12,8 @@ class CountOccurrenceOfChar {
         }
 
         val count = map.maxByOrNull { it.value }
+        //to print the max occurring char use below line
+        // val count = map.maxByOrNull { it.value }?.key
         println("Max count is $count")
 
     }
