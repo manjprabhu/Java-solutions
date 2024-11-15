@@ -25,7 +25,7 @@ public class MajorityElementLC169 {
                 votes--;
             }
         }
-        // now count the occurance of candidate  element in array and if  candidate occurs more than n/2 times than candidate is majority element
+        // now count the occurrence of candidate  element in array and if  candidate occurs more than n/2 times than candidate is majority element
         // else no majority element exists in array
         int count = 0;
         for (int num : a) {
