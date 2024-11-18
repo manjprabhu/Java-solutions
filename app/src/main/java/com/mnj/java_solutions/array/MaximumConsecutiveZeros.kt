@@ -19,9 +19,7 @@ class MaximumConsecutiveZeros {
 
             }
         }
-        var result = maxCount
-        if(countSoFar > maxCount)
-            result = countSoFar
-        println("==>> Max ones $result")
+
+        println("==>> Max ones ${Math.max(maxCount,countSoFar)}")
     }
 }
