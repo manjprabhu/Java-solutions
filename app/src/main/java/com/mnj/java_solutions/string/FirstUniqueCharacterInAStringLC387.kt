@@ -22,13 +22,12 @@ import java.util.HashMap
  */
 class FirstUniqueCharacterInAStringLC387 {
     fun firstUniqueChar() {
-        val str = "leetcode"
+        val str = "leetcodel"
         val map = HashMap<Char, Int>()
-        for (i in 0 until str.length) {
-            val c = str[i]
-            map[c] = map.getOrDefault(c, 0) + 1
+        for (element in str) {
+            map[element] = map.getOrDefault(element, 0) + 1
         }
-        for (i in 0 until str.length) {
+        for (i in str.indices) {
             if (map.containsKey(str[i]) && map[str[i]] == 1) {
                 println("==>> Index of first unique char is :$i")
                 return

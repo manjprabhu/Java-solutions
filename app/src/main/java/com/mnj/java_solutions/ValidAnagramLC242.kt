@@ -32,7 +32,7 @@ class ValidAnagramLC242 {
 
             //Fill the bucket array
             for (element in st1) {
-                char_counts[element - 'a']++
+                char_counts[element - 'a']++  //// Map 'a' to index 0, 'b' to 1, ..., 'z' to 25
             }
 
             //Empty the bucket array
