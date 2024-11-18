@@ -44,7 +44,7 @@ class MissingAndRepeatingNumber {
             (n * (n + 1) * (2 * n + 1) / 6).toLong() // sum of squares of first N natural numbers
         val sum = (n * (n + 1) / 2).toLong() // sum  of first N natural numbers
         for (num in arr) {
-            s1 = s1 + num
+            s1 += num
             s2 = s2 + num.toLong() * num.toLong()
         }
         val val1 = s1 - sum //x-y
