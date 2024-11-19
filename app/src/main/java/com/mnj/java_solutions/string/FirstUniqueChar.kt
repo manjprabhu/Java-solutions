@@ -12,7 +12,23 @@ class FirstUniqueChar {
 
         for (ele in input) {
             if (map.get(ele) == 1) {
-                println("First unique char is ${map.get(ele)}")
+                println("First unique char is $ele")
+                return
+            }
+        }
+    }
+
+    fun firstUniqueCharSolutionTwo() {
+        val input = "loveleetcode"
+        val arr = IntArray(26)
+
+        for (ele in input) {
+            arr[ele - 'a']++
+        }
+
+        for (ele in input) {
+            if (arr[ele - 'a'] == 1) {
+                println("First unique char is $ele")
                 return
             }
         }
