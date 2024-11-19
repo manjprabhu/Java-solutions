@@ -19,4 +19,21 @@ class ReverseString {
 
         println("Reverse string is $result")
     }
+
+    fun reverseSolutionTwo() {
+        val str  = "hello"
+        val token  = str.toCharArray()
+        var i=0
+        var j= token.size-1
+
+        while(i<j) {
+            val temp = token[j]
+            token[j]= token[i]
+            token[i]= temp
+            i++
+            j--
+        }
+
+        println("==>> Reverse string is ${String(token)}")
+    }
 }
