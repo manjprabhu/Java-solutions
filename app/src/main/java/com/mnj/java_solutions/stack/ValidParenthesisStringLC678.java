@@ -1,46 +1,48 @@
-package com.mnj.java_solutions.stack
+package com.mnj.java_solutions.stack;
 
-import java.util.Stack
+import java.util.Stack;
 
-class ValidParenthesisStringLC678 {
-    val isValid: Unit
-        get() {
-            val str = ")***"
+public class ValidParenthesisStringLC678 {
 
-            val stack = Stack<Int>()
-            val starStack = Stack<Int>()
+    public void isValid() {
+        String str = ")***";
 
-            for (i in str.indices) {
-                val ch = str[i]
+        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> starStack = new Stack<>();
 
-                if (ch == '(') {
-                    stack.push(i)
-                } else if (ch == '*') {
-                    starStack.push(i)
+        for (int i = 0; i < str.length(); i++) {
+
+            char ch = str.charAt(i);
+
+            if (ch == '(') {
+                stack.push(i);
+            } else if (ch == '*') {
+                starStack.push(i);
+            } else {
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                } else if (!starStack.isEmpty()) {
+                    starStack.pop();
                 } else {
-                    if (!stack.isEmpty()) {
-                        stack.pop()
-                    } else if (!starStack.isEmpty()) {
-                        starStack.pop()
-                    } else {
-                        println("==>> Invalid string ......")
-                        return
-                    }
+                    System.out.println("==>> Invalid string ......");
+                    return;
                 }
             }
-
-            while (!stack.isEmpty()) {
-                if (starStack.isEmpty()) {
-                    println("==>> Invalid string ......")
-                    return
-                } else if (starStack.peek() < stack.peek()) {
-                    println("==>> Invalid string ......")
-                    return
-                } else {
-                    starStack.pop()
-                    stack.pop()
-                }
-            }
-            println("==>> Valid  string *******")
         }
+
+        while (!stack.isEmpty()) {
+            if (starStack.isEmpty()) {
+                System.out.println("==>> Invalid string ......");
+                return;
+            } else if (starStack.peek() < stack.peek()) {
+                System.out.println("==>> Invalid string ......");
+                return;
+            } else {
+                starStack.pop();
+                stack.pop();
+            }
+        }
+        System.out.println("==>> Valid  string *******");
+
+    }
 }
