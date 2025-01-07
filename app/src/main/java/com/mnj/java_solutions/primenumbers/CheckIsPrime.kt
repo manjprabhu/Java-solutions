@@ -9,10 +9,8 @@ class CheckIsPrime {
             if (n % i == 0) {
                 println("==>> Number is NOT a prime number")
                 return
-            } else {
-                println("==>> Number is a prime number")
-                return
             }
+            println("==>> Number is a prime number")
         }
     }
 }
