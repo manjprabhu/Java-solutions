@@ -20,8 +20,8 @@ class RotateArrayLeft {
 
 
     fun rotateLeftSolutionTwo() {
-        var arr = intArrayOf(1, 2, 4, 6, 7, 8)
-        var d = 2
+        val arr = intArrayOf(1, 2, 4, 6, 7, 8)
+        val d = 2
 
         val temp = IntArray(arr.size)
 

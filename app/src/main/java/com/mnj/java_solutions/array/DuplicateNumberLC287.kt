@@ -8,7 +8,7 @@ import java.util.*
  *
  * There is only one repeated number in nums, return this repeated number.
  *
- * You must solve the problem without modifying the ar540ray nums and uses only constant extra space.
+ * You must solve the problem without modifying the array nums and uses only constant extra space.
  */
 class DuplicateNumberLC287 {
     fun duplicateNumber() {
