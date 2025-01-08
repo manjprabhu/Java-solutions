@@ -27,7 +27,7 @@ class ConsecutiveCharactersLC1446 {
         for (i in 1 until s.length) {
             if (s[i] == prev) {
                 count++
-                max_count = max_count.coerceAtLeast(count)
+                max_count = maxOf(max_count,count)// max_count.coerceAtLeast(count)
             } else {
                 count = 1
                 prev = s[i]
