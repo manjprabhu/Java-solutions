@@ -8,6 +8,7 @@ class FirstUniqueChar {
 
         for (ch in input) {
             map[ch] = map.getOrDefault(ch, 0) + 1
+            //  map.put(ch, map.getOrDefault(ch, 0) + 1)
         }
 
         for (ele in input) {
