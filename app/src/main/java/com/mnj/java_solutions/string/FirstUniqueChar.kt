@@ -7,11 +7,11 @@ class FirstUniqueChar {
         val map = HashMap<Char, Int>()
 
         for (ch in input) {
-            map.put(ch, map.getOrDefault(ch, 0) + 1)
+            map[ch] = map.getOrDefault(ch, 0) + 1
         }
 
         for (ele in input) {
-            if (map.get(ele) == 1) {
+            if (map[ele] == 1) {
                 println("First unique char is $ele")
                 return
             }
